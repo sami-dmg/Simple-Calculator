@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buttonGrid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alignmentMode="alignMargins"
+    android:background="#000000"
+    android:columnCount="4"
+    android:padding="8dp"
+    android:rowCount="6">
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="end|center_vertical"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:layout_columnSpan="4" />
+
+    <!-- Row 1 -->
+    <Button style="@style/CalcGrayButton" android:text="AC" android:onClick="clear"/>
+    <Button style="@style/CalcGrayButton" android:text="+/-" android:onClick="plusMinus"/>
+    <Button style="@style/CalcGrayButton" android:text="%" android:onClick="percent"/>
+    <Button style="@style/CalcOrangeButton" android:text="÷" android:onClick="operatorClick"/>
+
+    <!-- Row 2 -->
+    <Button style="@style/CalcDarkButton" android:text="7" android:onClick="numberClick"/>
+    <Button style="@style/CalcDarkButton" android:text="8" android:onClick="numberClick"/>
+    <Button style="@style/CalcDarkButton" android:text="9" android:onClick="numberClick"/>
+    <Button style="@style/CalcOrangeButton" android:text="×" android:onClick="operatorClick"/>
+
+    <!-- Row 3 -->
+    <Button style="@style/CalcDarkButton" android:text="4" android:onClick="numberClick"/>
+    <Button style="@style/CalcDarkButton" android:text="5" android:onClick="numberClick"/>
+    <Button style="@style/CalcDarkButton" android:text="6" android:onClick="numberClick"/>
+    <Button style="@style/CalcOrangeButton" android:text="-" android:onClick="operatorClick"/>
+
+    <!-- Row 4 -->
+    <Button style="@style/CalcDarkButton" android:text="1" android:onClick="numberClick"/>
+    <Button style="@style/CalcDarkButton" android:text="2" android:onClick="numberClick"/>
+    <Button style="@style/CalcDarkButton" android:text="3" android:onClick="numberClick"/>
+    <Button style="@style/CalcOrangeButton" android:text="+" android:onClick="operatorClick"/>
+
+    <!-- Row 5 -->
+    <Button style="@style/CalcDarkButton" android:text="0" android:layout_columnSpan="2" android:onClick="numberClick"/>
+    <Button style="@style/CalcDarkButton" android:text="." android:onClick="dot"/>
+    <Button style="@style/CalcOrangeButton" android:text="=" android:onClick="equal"/>
+</GridLayout>
